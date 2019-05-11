@@ -12,3 +12,7 @@ Jeu du pendu
 cd jeu-pendu
 node ./main.js
 ````
+
+## version web
+
+- Jeu en ligne [sur github pages](https://boly38.github.io/leSuspendu/www/suspendu.html)

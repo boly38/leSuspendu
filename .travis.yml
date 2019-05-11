@@ -1,0 +1,9 @@
+language: generic
+deploy:
+  provider: pages
+  skip_cleanup: false
+  github_token: $GITHUB_TOKEN
+  keep_history: false
+  local_dir: www
+  on:
+    branch: master

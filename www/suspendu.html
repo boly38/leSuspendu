@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="suspendu.css">
+    <title>Le Suspendu</title>
+  </head>
+  <body>
+<body onload="auChargement();">
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+      <a class="navbar-brand" href="#" onclick="auChargement();">Le Pendu</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#" onclick="nouveauJeu()">Nouveau jeu</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+	
+    <main role="main" class="container imgpendu" id="bienvenue">
+	  <div class="lead">
+		  <h1> Le Pendu</h1>
+		  <p>Bienvenue,
+		  c'est le jeu du pendu. Ce jeu a été réalisé par Lény et Brice. Merci à eux.
+		  </p>
+	  </div>
+		<div class="lead">
+		  <h3> Le but du jeu</h3>
+		  <p>Le but du jeu est de trouver un mot sans être pendu.
+		  </p>
+		</div>
+		<div class="lead">
+		  <h3> Le déroulement du jeu</h3>
+		  <p>Choisissez parmis les lettres disponibles. Si la lettre est dans le mot, elle apparaîtra ainsi, sinon elle appraîtra dans les lettres non présentes dans le mot et vous perdez un tour. 
+		  Vous avez jusqu'à 12 tours pour éviter d'être pendu et trouver le mot complet.
+		  </p>
+		  
+		</div>
+		<div class="lead text-right">
+		  <a class="btn btn-lg btn-primary" role="button" onclick="nouveauJeu()">JOUER !</a>
+		</div>
+    </main>
+
+	<main role="main" class="container"  id="suspendu">
+	    <div class="jumbotron text-center">
+		  <p>Le mot &agrave; deviner</p>
+		  <h1><div id="motadeviner" class="lettresEpacees"></div></h1>
+  	    </div>		
+		<div class="row jumbotron">
+		  <div class="col-md-6 lead">
+			<h2>Lettres disponibles</h2>
+			<p id="lettresdisponibles">
+				<!--
+				<button type="button" class="btn btn-circle btn-info btn-sm">A</button>
+				<button type="button" class="btn btn-circle btn-info btn-sm">B</button>
+				<button type="button" class="btn btn-circle btn-info btn-sm">C</button>
+				<button type="button" class="btn btn-circle btn-info btn-sm">E</button>
+				<button type="button" class="btn btn-circle btn-info btn-sm">F</button>
+				-->
+			</p>
+		  </div>
+		  <div class="col-md-6 lead">
+			<h2>Lettres non pr&eacute;sentes</h2>
+			<p id="lettreschoisies">
+				<!--
+				<button type="button" class="btn btn-primary btn-sm" disabled>D</button>
+				-->
+			</p>
+		  </div>
+		</div>
+    </main>
+
+	<main role="main" class="container"  id="termine">
+	  <div class="lead">
+		  <h1>Jeu terminé <span id="termineEtat"></span></h1>
+	  </div>
+	  <div class="jumbotron text-center">
+		  <p>Le mot &agrave; deviner était</p>
+		  <h1><div id="termineMot" class="lettresEpacees"></div></h1>
+  	  </div>
+      <div class="lead text-right">
+	    <a class="btn btn-lg btn-primary" role="button" onclick="nouveauJeu()">JOUER !</a>
+	  </div>
+    </main>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="js/ListeDeMots.js"></script>
+	<script src="js/JeuPendu.js"></script>
+	<script src="js/suspendu.js"></script>
+  </body>
+</html>
