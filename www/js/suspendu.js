@@ -89,6 +89,7 @@ class Suspendu {
 var suspendu;
 
 function auChargement() {
+	$('[data-toggle="tooltip"]').tooltip();   
 	suspendu = new Suspendu();
 }
 
