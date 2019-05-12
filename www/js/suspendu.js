@@ -66,7 +66,7 @@ class Suspendu {
 		var lettresChoisiesHtml = "";
 		this.toutesleslettres.forEach(function(lettre) {
 		  if (jeu.estDansLesLettresChoisies(lettre) && !jeu.estDansLeMot(lettre)) {
-			lettresChoisiesHtml += "<button type=\"button\" class=\"btn btn-warning btn-sm\">" + lettre + "</button>";
+			lettresChoisiesHtml += "<button type=\"button\" class=\"btn btn-warning btn-sm\" disabled>" + lettre + "</button>";
 		  }
 		});
 		$("#lettreschoisies").html(lettresChoisiesHtml);
