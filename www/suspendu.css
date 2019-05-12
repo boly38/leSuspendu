@@ -38,3 +38,8 @@
 .lettresEpacees {
   letter-spacing: 5px;
 }
+
+.credit {
+  font-size: 10px;
+  font-style: italic;
+}
