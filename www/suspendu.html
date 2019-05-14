@@ -54,15 +54,15 @@
 
 	<div role="main" class="container"  id="suspendu">
 		<div class="row jumbotron">
-			<div class="col-md-7 text-center" style="border: 1px solid green">
+			<div class="col-md-7 text-center">
 			  <p>Le mot &agrave; deviner</p>
 			  <h1><div id="motadeviner" class="lettresEpacees"></div></h1>
 			  <br/>
-			  <p>Il vous reste 12 tours</p>
+			  <p>Il vous reste <span id="tourRestant"></span> tours</p>
 			</div>
-			<div class="col-md-5 text-center" style="border: 1px solid grey">
-			  <img src="assets/pendu_400_3_12.jpg" width="200px"/>
-			  <p class="credit">Auteur : Brice</p>
+			<div class="col-md-5 text-center">
+			  <img id="imageDuJeu" src="assets/pendu_400_3_12.jpg" width="200px"/>
+			  <p class="credit" id="imageCredit">Auteur : Brice</p>
 			</div>		
 		</div>
 		<div class="row jumbotron">
@@ -78,7 +78,7 @@
 				-->
 			</p>
 		  </div>
-		  <div class="col-md-6 lead">
+		  <div class="col-md-6 lead" id="lettresnonpresentes">
 			<h2>Lettres non pr&eacute;sentes</h2>
 			<p id="lettreschoisies">
 				<!--
@@ -89,17 +89,25 @@
 		</div>
     </div>
 
-	<div role="main" class="container"  id="termine">
-	  <div class="lead">
-		  <h1>Jeu terminé <span id="termineEtat"></span></h1>
-	  </div>
-	  <div class="jumbotron text-center">
-		  <p>Le mot &agrave; deviner était</p>
-		  <h1><div id="termineMot" class="lettresEpacees"></div></h1>
-  	  </div>
-      <div class="lead text-right">
-	    <a class="btn btn-lg btn-primary" role="button" onclick="nouveauJeu()">JOUER !</a>
-	  </div>
+  	<div class="container"  id="termine">
+		<div class="col-md-7 text-center">
+		  <div class="lead">
+			  <h1>Jeu terminé <span id="termineEtat"></span></h1>
+		  </div>
+		  <div class="jumbotron text-center">
+			  <p>Le mot &agrave; deviner était</p>
+			  <h1><div id="termineMot" class="lettresEpacees"></div></h1>
+		  </div>
+		</div>
+		<div class="col-md-5 text-center">
+		  <img id="termineImage" src="assets/pendu_400_3_12.jpg" width="200px"/>
+		  <p class="credit" id="termineCredit">Auteur : Brice</p>
+		</div>
+		<div class="lead text-right">
+			<a class="btn btn-lg btn-primary" role="button" onclick="nouveauJeu()">JOUER !</a>
+		</div>
+	</div>
+
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -107,6 +115,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	<script src="js/ListeDeMots.js"></script>
+	<script src="js/Illustrations.js"></script>
 	<script src="js/JeuPendu.js"></script>
 	<script src="js/suspendu.js"></script>
   </body>

@@ -30,11 +30,13 @@ class Suspendu {
 		$("#suspendu").show();
 		$("#termine").hide();
 		this.jeu = new JeuPendu();
+	    this.illustration = (new Illustrations()).illustrationAleatoire();
 		this.rafraichirJeu();
 	}
 	
 	rafraichirJeu() {
 		if (this.jeu.estTermine()) {
+			this.afficherIllustration();
 			$("#suspendu").hide();
 			$("#termine").show();
 			$("#termineMot").text(this.jeu.mot);
@@ -48,6 +50,7 @@ class Suspendu {
 		this.afficherLettresDisponibles();
 		this.afficherLettresChoisies();
 		this.afficherMot();
+		this.afficherIllustration();
 	}
 
     afficherLettresDisponibles() {
@@ -70,6 +73,11 @@ class Suspendu {
 		  }
 		});
 		$("#lettreschoisies").html(lettresChoisiesHtml);
+		if (lettresChoisiesHtml == "") {
+		  $("#lettresnonpresentes").hide();
+		} else {
+		  $("#lettresnonpresentes").show();
+		}
 	}
 
     afficherMot() {
@@ -77,8 +85,20 @@ class Suspendu {
 		var mot = this.jeu.motMasque();
 		console.info(mot);
 		$("#motadeviner").html(mot);
+		$("#tourRestant").text(this.jeu.tourRestants);
 	}
 	
+	afficherIllustration() {
+		var tour = this.jeu.tourEnCours();
+		var nomImage = this.illustration.imageDuTour(tour);
+		var credit = this.illustration.auteur + " - " + this.illustration.description;
+		console.info(nomImage);
+		$('#imageDuJeu').attr('src',nomImage);
+		$('#imageCredit').html(credit);
+		$('#termineImage').attr('src',nomImage);
+		$('#termineCredit').html(credit);
+	}
+
 	choixLettre(lettre) {
 		this.jeu.prochainTour(lettre, function(){});
 		this.rafraichirJeu();

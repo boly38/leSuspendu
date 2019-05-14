@@ -78,6 +78,10 @@ class JeuPendu {
     }
     cb();
   }
+  
+  tourEnCours() {
+	  return 12 - this.tourRestants;
+  }
 
   estTermine() {
     return this.jeuFini;
