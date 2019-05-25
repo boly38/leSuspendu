@@ -15,4 +15,4 @@ node ./main.js
 
 ## version web
 
-- Jeu en ligne [sur github pages](https://boly38.github.io/leSuspendu/www/suspendu.html)
+- Jeu en ligne [sur github pages](https://boly38.github.io/leSuspendu/suspendu.html)
